@@ -13,6 +13,7 @@ searchBtn.addEventListener('click', (e) => {
             .then(data => {
                 if (data.message == 'Not Found') {
                     //show alert
+                    ui.showAlert("User not Found!", "alert alert-danger");
                 } else {
                     //show profile
                     ui.showProfile(data)
@@ -21,6 +22,7 @@ searchBtn.addEventListener('click', (e) => {
 
     } else {
         //Clear Profile
+        ui.clearProfile();
 
     }
 })
